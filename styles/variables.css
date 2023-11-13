@@ -1,1 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-shrift:'Inter-Variable';
+    --accent-shrift: 'PressStart2P-Regular';
+    --weight-title:700;
+    --weight-paragraf:400;
+    
+    --accent-color:#000000;
+    --bg-image:repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
+    linear-gradient(to bottom,  #e7e7e7 1%, #1a1a1a 100%);
+    --lenght-field:clamp(375px, 100%, 696px);
+    --bg-color:#ffffff;
+
+}
