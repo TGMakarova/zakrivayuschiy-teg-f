@@ -22,6 +22,8 @@
     --bg-image:repeating-linear-gradient(to right,  #d3d3d3, transparent 4px),
     repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
     linear-gradient(to bottom,  #e7e7e7 1%, #1a1a1a 100%);
+    --bg-color:#ffffff;
+    --t-stroke:#ffffff;
 
 }
 
@@ -45,5 +47,7 @@
     --bg-image:repeating-linear-gradient(to right,  #d3d3d3, transparent 4px),
     repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
     linear-gradient(to bottom,  #e7e7e7 1%, #1a1a1a 100%);
+    --bg-color:#ffffff;
+    --t-stroke:#ffffff;
     }
 }
