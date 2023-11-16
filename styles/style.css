@@ -32,11 +32,11 @@
   font-weight: 400;
   font-style: normal;
 }
-
+/*
 *{
   outline: 1px solid yellow;
 }
-
+*/
 .page {
   display: flex;
   margin:0 auto;
@@ -304,6 +304,16 @@ align-self: flex-end;
   display: flex;
   width: 39px;
   height: 38px;
+  border: transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s ease;
 }
 
 .card__like-button {
@@ -315,6 +325,7 @@ align-self: flex-end;
   align-items: center;
   cursor: pointer;
   position: relative;
+  
   
 }
 
@@ -352,36 +363,45 @@ width: 100%;
 .button__text {
   font-family: PressStart2P;
    weight:400;
-font-size:14px;
-line-height:12.6px;
-color:var(--accent-color);
+   font-size:14px;
+  line-height:12.6px;
+  color:var(--text-color);
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  
 }
 
 .footer {
   display: flex;
-  width:335px;
-  height: 51px;
+  height: min-content;
   margin: auto;
-  border:1px solid var(--accent-color);
   margin-top: 54px;
-  margin-bottom: 105px;
-  flex-direction: row;
+  padding-bottom: 105px;
   justify-content: center;
+  
 }
 
 .floppy {
   display: flex;
   width: 21px;
   height: 21px;
+  color: var(--text-color);
+  z-index: 2;
+  mix-blend-mode: difference;
+  position: relative;
 }
 
 .footer__button {
   display:flex;
+  width:335px;
+  height: 51px;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--accent-color);
   cursor: pointer;
-
+  position: relative;
+  background-color: var(--bg-color);
 
 }
 
@@ -399,20 +419,37 @@ color:var(--accent-color);
   content: "";
   display: block;
   width: 0px;
-  height: 100%;
+  position: absolute;
+  height: 51px;
+ 
   transform: translate(100%);
   left: 0px;
   transform: scaleX(0);
   background-color: var(--accent-color);
   transition:  0.5s ease-in-out;
   position: absolute;
+  
+  
+  
+  
+  
 }
 
 .footer__button:hover::before {
 width: 100%;
   transform: scaleX(1);
+  /*
+  mix-blend-mode: difference;
+  */
   transform: translate(0);
+  
+  /*
+  
+  */
+ 
 }
+
+
 
 
 @media screen and (width  <=375px) {
