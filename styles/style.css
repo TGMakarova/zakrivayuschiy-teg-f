@@ -489,9 +489,6 @@ transition: fill 0.3s linear;
 .footer__button:hover::before {
 width: 100%;
   transform: scaleX(1);
-  /*
-  mix-blend-mode: difference;
-  */
   transform: translate(0);
  
 }
