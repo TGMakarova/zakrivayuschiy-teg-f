@@ -15,6 +15,8 @@
     --bg-color:#000000;
     --t-stroke:#000000;
     --text-color:#00cc14;
+    --heart-contour: #00cc14;
+    --heart-color:#FF0000;
 }
 
 :root.theme-light {
@@ -28,6 +30,8 @@
     --bg-color:#ffffff;
     --t-stroke:#ffffff;
     --text-color:#ffffff;
+    --heart-contour: #000000;
+    --heart-color:#FF0000;
 
 }
 
@@ -43,6 +47,8 @@
     --bg-color:#000000;
     --t-stroke:#000000;
     --text-color:#00cc14;
+    --heart-contour: #00cc14;
+    --heart-color:#FF0000;
 }
 }
 
@@ -57,5 +63,7 @@
     --bg-color:#ffffff;
     --t-stroke:#ffffff;
     --text-color:#ffffff;
+    --heart-contour: #000000;
+    --heart-color:#FF0000;
     }
 }

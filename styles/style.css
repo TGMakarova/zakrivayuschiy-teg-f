@@ -355,15 +355,71 @@ align-self: flex-end;
 }
 
 .card__like-button:hover::before {
-width: 100%;
+  width: 100%;
   transform: scaleX(1);
   transform: translate(0);
 }
+.like-icon{
+
+  cursor: pointer;
+}
+.sparks {
+  opacity:0;
+}
+
+.core:{
+  fill:none;
+}
+
+ .like-icon:hover .core {
+fill: var(--heart-contour);
+transition: fill 0.3s linear;
+}
+
+.main-body {
+  fill:none;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-contour);
+  transition-delay: 0.03s;
+  transition:fill 0.5s linear;
+  }
+
+  .like-icon:active .core {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear;
+    }
+
+    .like-icon:active .main-body {
+      fill: var(--heart-color);
+      transition-delay: 0.03s;
+      transition:fill 0.5s linear;
+      }
+
+      .like-icon:active .contour {
+        fill: var(--heart-color);
+        transition-delay: 0.06s;
+        transition:fill 0.5s linear;
+        }
+  .heart {
+
+  }
+
+  .like-icon.is-liked .heart {
+    animation:heart-scaling 0.1s 0.3s ease-in infinite;
+    
+  }
+  .like-icon.is-liked .sparks {
+   
+    animation:heart-sparks 0.3s 0.3s ease-in infinite;
+  }
+
 
 .button__text {
   font-family: PressStart2P;
-   weight:400;
-   font-size:14px;
+  weight:400;
+  font-size:14px;
   line-height:12.6px;
   color:var(--text-color);
   position: relative;
@@ -428,11 +484,6 @@ width: 100%;
   background-color: var(--accent-color);
   transition:  0.5s ease-in-out;
   position: absolute;
-  
-  
-  
-  
-  
 }
 
 .footer__button:hover::before {
@@ -442,14 +493,38 @@ width: 100%;
   mix-blend-mode: difference;
   */
   transform: translate(0);
-  
-  /*
-  
-  */
  
 }
 
+.dialog__mod {
+  display: grid;
+  position: relative;
+  border-width: 1px solid var(--accent-color);
+  max-inline-size: 80%;
+  min-inline-size: 250px;
+  position: fixed;
+  inset: 0;
+  
+}
 
+.dialog__mod:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
+.dialog__mod::backdrop {
+  content: "";
+  background-color: rgb(0 0 0 / 0.6);
+  /*
+  backdrop-filter: blur(7px);
+  */
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+} 
 
 
 @media screen and (width  <=375px) {
