@@ -13,35 +13,31 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 @keyframes flecha {
-    0% {
-      left:0px;
-  
-    }
-    50% {
-      left: 4px;
-    }
-    100%
-    {
-        left:0;
-    }
+  0% {
+    left: 0px;
   }
+  50% {
+    left: 4px;
+  }
+  100% {
+    left: 0;
+  }
+}
 
-  @keyframes heart-scaling {
+@keyframes heart-scaling {
   0% {
     scale: 1;
   }
   100% {
-
-  scale:1.5;
+    scale: 1.5;
+  }
 }
-  }
 
-  @keyframes heart-sparks {
-    0% {
-      opacity: 0;
-    }
-    100% {
-  
-    opacity:1;
+@keyframes heart-sparks {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
   }
+}
