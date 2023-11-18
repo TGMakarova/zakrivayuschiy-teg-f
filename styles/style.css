@@ -44,7 +44,7 @@
 
   min-inline-size: 320px;
   min-block-size: 100dvb;
-
+  font-feature-settings: normal;
   flex-direction: column;
   color: var(--accent-color);
   align-items: center;
@@ -92,10 +92,10 @@
   gap: 14px;
   position: relative;
 }
-
+/*
 .header__theme-menu {
 }
-
+*/
 .theme-menu__button {
   display: block;
   cursor: pointer;
@@ -307,6 +307,7 @@
   height: 100%;
   transform: translate(100%);
   left: 0px;
+  
   transform: scaleX(0);
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
@@ -360,9 +361,10 @@
   transition-delay: 0.06s;
   transition: fill 0.5s linear;
 }
+/*
 .heart {
 }
-
+*/
 .like-icon.is-liked .heart {
   animation: heart-scaling 0.1s 0.3s ease-in infinite;
 }
