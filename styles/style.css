@@ -44,7 +44,7 @@
 
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-feature-settings: normal;
+  font-variation-settings: "weight-paragraf" var(--weight-paragraf);
   flex-direction: column;
   color: var(--accent-color);
   align-items: center;
@@ -305,9 +305,11 @@
   display: block;
   width: 0px;
   height: 100%;
+  /*
   transform: translate(100%);
+  */
   left: 0px;
-  
+
   transform: scaleX(0);
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
@@ -317,6 +319,7 @@
 .card__like-button:hover::before {
   width: 100%;
   transform: scaleX(1);
+
   transform: translate(0);
 }
 .like-icon {
@@ -374,7 +377,7 @@
 
 .button__text {
   font-family: PressStart2P;
-  weight: 400;
+  font-weight: 400;
   font-size: 14px;
   line-height: 12.6px;
   color: var(--text-color);
@@ -429,8 +432,9 @@
   width: 0px;
   position: absolute;
   height: 51px;
-
+  /*
   transform: translate(100%);
+  */
   left: 0px;
   transform: scaleX(0);
   background-color: var(--accent-color);
