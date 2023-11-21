@@ -9,9 +9,9 @@
     --accent-color:#00cc14;
     --weight-title:785;
     --weight-paragraf:465;
-    --bg-image:repeating-linear-gradient(to right, #000, transparent 4px),
-    repeating-linear-gradient(to bottom, #000, transparent 4px),
-    linear-gradient(to bottom, #007f0c, #004306);
+    --bg-image:repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #007f0c, #004306);
     --bg-color:#000000;
     --t-stroke:#000000;
     --text-color:#00cc14;
@@ -24,9 +24,9 @@
     --accent-color:#000000;
     --weight-title:700;
     --weight-paragraf:400;
-    --bg-image:repeating-linear-gradient(to right,  #d3d3d3, transparent 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
-    linear-gradient(to bottom,  #e7e7e7 1%, #1a1a1a 100%);
+    --bg-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --bg-color:#ffffff;
     --t-stroke:#ffffff;
     --text-color:#ffffff;
@@ -41,9 +41,9 @@
     --accent-color:#00cc14;
     --weight-title:785;
     --weight-paragraf:465;
-    --bg-image:repeating-linear-gradient(to right, #000, transparent 4px),
-    repeating-linear-gradient(to bottom, #000, transparent 4px),
-    linear-gradient(to bottom, #007f0c, #004306);
+    --bg-image:repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #007f0c, #004306);
     --bg-color:#000000;
     --t-stroke:#000000;
     --text-color:#00cc14;
@@ -57,9 +57,9 @@
     --accent-color:#000000;
     --weight-title:700;
     --weight-paragraf:400;
-    --bg-image:repeating-linear-gradient(to right,  #d3d3d3, transparent 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3, transparent 4px),
-    linear-gradient(to bottom,  #e7e7e7 1%, #1a1a1a 100%);
+    --bg-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --bg-color:#ffffff;
     --t-stroke:#ffffff;
     --text-color:#ffffff;
