@@ -125,10 +125,11 @@
   content: "";
   display: block;
   width: 0px;
-  height: 3px;
-  margin-top: -3px;
+  height: 2px;
+  margin-top: 2px;
   background-color: var(--accent-color);
-  transition: width 0.5s;
+  transition: width 0.3s;
+  transition-timing-function: ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -145,7 +146,7 @@
   height: 14px;
   left: 0px;
   bottom: 1px;
-  animation: flecha 1s ease-in-out infinite;
+  animation: flecha 0.5s ease-in-out infinite;
 
   color: var(--accent-color);
 }
@@ -331,7 +332,7 @@
   display: flex;
   width: 39px;
   height: 38px;
-  border: transparent;:
+  border-color: transparent;
 }
 
 .card__icon-button:focus {
@@ -340,7 +341,8 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-  transition: border 0.3s ease;
+  transition: border 0.3s;
+  transition-timing-function: ease;
 }
 
 .card__like-button {
@@ -359,8 +361,9 @@
 }
 
 .card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px 2px var(--accent-color);
-  transition: box-shadow 0.5s;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+  transition: box-shadow 0.3s;
+  transition-timing-function: ease;
 }
 
 .card__like-button::before {
@@ -389,39 +392,53 @@
 .like-icon {
   display: flex;
   cursor: pointer;
-  width: 27px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: bottom;
-  border: 1px solid red;
-  align-self: center;
   
+  align-self: center;
+  /*
   scale: 1.8;
-
+*/
 
 }
 .sparks {
   opacity: 0;
 }
 
-.core: {
-  fill: none;
+.core {
+  fill: transparent;
+  transition-delay: 0.03s;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-property: fill;
 }
 
 .like-icon:hover .core {
-  fill: var(--heart-contour);
+  fill: var(--accent-color);
   transition: fill 0.3s linear;
 }
 
+
+
+
 .main-body {
-  fill: none;
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--heart-contour);
-  transition-delay: 0.03s;
-  transition: fill 0.5s linear;
+  fill: var(--accent-color);
+  transition-delay: 0.05s;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-property: fill;
+  
 }
+
+
+
 
 .like-icon:active .core {
   fill: var(--heart-color);
@@ -430,24 +447,51 @@
 
 .like-icon:active .main-body {
   fill: var(--heart-color);
-  transition-delay: 0.03s;
-  transition: fill 0.5s linear;
+  transition-delay: 0.05s;
+  transition: fill 0.3s linear;
 }
 
-.like-icon:active .contour {
+
+.like-icon.is-liked .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color);
+  transition-delay: 0.05s;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
   fill: var(--heart-color);
   transition-delay: 0.06s;
-  transition: fill 0.5s linear;
+  transition: fill 0.3s linear;
 }
+
 /*
+
 .heart {
+  animation: heart-scaling 0.3s ease-in reverse;
+  animation-iteration-count: 1;
+  
+  
+
+
 }
 */
 .like-icon.is-liked .heart {
-  animation: heart-scaling 0.1s 0.3s ease-in infinite;
+  animation: heart-scaling 0.3s ease-in normal;
+  animation-iteration-count: 1;
+  animation-direction:alternate;
+  animation-delay: 0.1s;
+  
 }
 .like-icon.is-liked .sparks {
-  animation: heart-sparks 0.3s 0.3s ease-in infinite;
+  animation: heart-sparks 0.3s 0.3s ease-in;
+  animation-direction:alternate;
+  animation-iteration-count: 1;
+  
 }
 
 .button__text {
@@ -486,6 +530,7 @@
   height: 51px;
   justify-content: center;
   align-items: center;
+  gap:8px;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   position: relative;
@@ -524,13 +569,42 @@
 }
 
 .dialog__mod {
-  display: grid;
+  display: flex;
   position: relative;
   border-width: 1px solid var(--accent-color);
   max-inline-size: 80%;
   min-inline-size: 250px;
   position: fixed;
   inset: 0;
+  flex-direction: column;
+  gap:30px;
+  border: 2px solid var(--accent-color) ;
+}
+.dialog__name {
+  display:flex;
+  width: 100%;
+  padding-top: 31.5px;
+  gap:22px;
+
+}
+
+.dialog__button {
+  display: flex;
+  padding-bottom: 30.5px;
+  width: 293px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+
+}
+
+.dialog__text {
+  display:flex;
+  width: 234px;
+
+
 }
 
 .dialog__mod:not([open]) {

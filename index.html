@@ -356,7 +356,7 @@
       aria-controls="dialog-id">
       
       <svg viewBox ="0 0 40 40" class="floppy">
-        <use href="#floppy-1">
+        <use href="svg/floppy.svg#floppy-1">
       </svg>
             <span class="button__text">
               Сохранить на память
@@ -364,9 +364,18 @@
       </button>
     </footer>
     <dialog class="dialog__mod" id="dialog-id" >
-      <h2>Вставьте дискету, чтобы продолжить</h2>
+      <div class="dialog__name">
+      <svg viewBox ="0 0 40 40" class="floppy">
+        <use href="svg/floppy.svg#floppy-1">
+      </svg>
+            <span class="dialog__text button__text">
+              Вставьте дискету, чтобы продолжить
+            </span>
+          </div>
+
+      
       <form>
-          <button> ок
+          <button class="dialog__button button__text"> ок
           </button> 
       </form>
   </dialog> 
