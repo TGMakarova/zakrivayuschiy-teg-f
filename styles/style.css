@@ -70,14 +70,14 @@
 .theme-menu {
   display: flex;
   padding-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 12.5px;
+  gap: 9px;
   position: relative;
 }
 /*
@@ -145,7 +145,7 @@
   width: 14px;
   height: 14px;
   left: 0px;
-  bottom: 1px;
+  bottom: 5px;
   animation: flecha 0.5s ease-in-out infinite;
 
   color: var(--accent-color);
@@ -318,21 +318,27 @@
   margin-top: 25px;
   margin-bottom: 24px;
   margin-right: 24px;
-  gap:5px;
+  background-color: transparent;
+  
   /*
   border: 2px solid var(--accent-color);
   border-top: none;
   */
-  justify-content: center;
+  gap:10px;
   align-self: flex-end;
-  align-content: center;
+  
 }
 
 .card__icon-button {
+  /*
   display: flex;
+  */
   width: 39px;
   height: 38px;
-  border-color: transparent;
+  margin-left: -5px;
+  border-color:transparent;
+  cursor: pointer;
+  position: relative;
 }
 
 .card__icon-button:focus {
@@ -346,7 +352,9 @@
 }
 
 .card__like-button {
+  
   display: flex;
+  
   width: 129px;
   height: 38px;
   border: 2px solid var(--accent-color);
@@ -375,8 +383,9 @@
   transform: translate(100%);
   */
   left: 0px;
-
+/*
   transform: scaleX(0);
+  */
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
   position: absolute;
@@ -384,23 +393,25 @@
 
 .card__like-button:hover::before {
   width: 100%;
+/*
   transform: scaleX(1);
-
+  */
   transform: translate(0);
+  
 }
 
 .like-icon {
   display: flex;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: bottom;
   
-  align-self: center;
-  /*
-  scale: 1.8;
-*/
+  width: 39px;
+  height: 38px;
+  position: absolute;
+  
+  
+  left: 0;
+  top: 0;
+  
+  
 
 }
 .sparks {
@@ -469,22 +480,18 @@
   transition: fill 0.3s linear;
 }
 
-/*
+
 
 .heart {
-  animation: heart-scaling 0.3s ease-in reverse;
-  animation-iteration-count: 1;
-  
-  
-
-
+  z-index:2;
 }
-*/
+
 .like-icon.is-liked .heart {
   animation: heart-scaling 0.3s ease-in normal;
   animation-iteration-count: 1;
   animation-direction:alternate;
   animation-delay: 0.1s;
+  
   
 }
 .like-icon.is-liked .sparks {
@@ -509,7 +516,7 @@
   display: flex;
   height: min-content;
   margin: auto;
-  margin-top: 54px;
+  margin-top: 51px;
   padding-bottom: 105px;
   justify-content: center;
 }
@@ -523,6 +530,9 @@
   mix-blend-mode: difference;
   position: relative;
 }
+
+
+
 
 .footer__button {
   display: flex;
@@ -556,7 +566,9 @@
   transform: translate(100%);
   */
   left: 0px;
+  /*
   transform: scaleX(0);
+  */
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
   position: absolute;
@@ -564,14 +576,16 @@
 
 .footer__button:hover::before {
   width: 100%;
+  /*
   transform: scaleX(1);
-  transform: translate(0);
+  */
+  transform:  translate(0);
 }
 
 .dialog__mod {
   display: flex;
   position: relative;
-  border-width: 1px solid var(--accent-color);
+ 
   max-inline-size: 80%;
   min-inline-size: 250px;
   position: fixed;
@@ -587,24 +601,51 @@
   gap:22px;
 
 }
+.dialog__floppy {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: var(--text-color);
+  z-index: 2;
+  mix-blend-mode: difference;
+  position: relative;
+}
 
 .dialog__button {
   display: flex;
   padding-bottom: 30.5px;
   width: 293px;
+  
   height: 38px;
+  
+  
+ 
   justify-content: center;
-  align-items: center;
+  align-items:center;
+  
   border: 2px solid var(--accent-color);
   cursor: pointer;
+
 
 }
 
 .dialog__text {
-  display:flex;
+  
   width: 234px;
+  font-family: PressStart2P, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
 
-
+.dialog__button-text {
+  
+  font-family: PressStart2P, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  text-transform: uppercase;
 }
 
 .dialog__mod:not([open]) {
@@ -615,9 +656,9 @@
 .dialog__mod::backdrop {
   content: "";
   background-color: rgb(0 0 0 / 0.6);
-  /*
+  
   backdrop-filter: blur(7px);
-  */
+  
   position: absolute;
   top: 0;
   left: 0;
