@@ -13,21 +13,14 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-* {
-  outline: 1px solid yellow;
-}
- 
 
 .page {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
-
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  
-  font-variation-settings: 'wgth' var(--weight-paragraf);
-  
+  font-variation-settings: "wgth" var(--weight-paragraf);
   flex-direction: column;
   color: var(--accent-color);
   align-items: center;
@@ -35,7 +28,6 @@
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
-  
   background-repeat: no-repeat;
 }
 
@@ -46,7 +38,6 @@
 }
 
 .header {
-  
   display: flex;
   flex-direction: column;
   font-family: PressStart2P, sans-serif;
@@ -54,28 +45,20 @@
   background-color: var(--bg-color, #ffffff);
   border: 2px solid var(--accent-color);
   margin-top: 102px;
-
-  
-
 }
 
 .header__logo {
-  
   color: var(--accent-color);
   padding-top: 137px;
-  
-  
   padding-left: 7px;
-  font-size: 65px;
-  line-height: 65px;
-  
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  line-height: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
 }
 
 .theme-menu {
   display: flex;
   padding-top: 25px;
   margin-bottom: 23px;
-  
 }
 
 .theme-menu__list {
@@ -84,10 +67,7 @@
   gap: 9px;
   position: relative;
 }
-/*
-.header__theme-menu {
-}
-*/
+
 .theme-menu__button {
   display: block;
   cursor: pointer;
@@ -115,13 +95,11 @@
 .theme-menu__button:focus {
   outline: none;
   background-color: transparent;
-
   opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible {
   background-color: transparent;
-
   opacity: 0.6;
 }
 
@@ -138,7 +116,6 @@
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
-
   width: 100%;
 }
 
@@ -151,7 +128,6 @@
   left: 0px;
   bottom: 5px;
   animation: flecha 0.5s ease-in-out infinite;
-
   color: var(--accent-color);
 }
 
@@ -179,45 +155,24 @@
   background-color: var(--bg-color);
   margin-top: 100px;
   flex-direction: column;
-  width:696px;
   gap: 57px;
 }
 
 .card {
-  
- 
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  
-  border:2px solid var(--accent-color);
-  /*
-  gap: 10px;
-  */
+  border: 2px solid var(--accent-color);
 }
-/*
-.card:first-child {
-
-  margin-top: 1px;
-}
-*/
-
 
 .subtitle {
   font-family: inherit;
   padding-left: 10px;
   padding-top: 2px;
-  /*
-  padding-right: 24px;
-  */
   font-weight: var(--weight-title, 700);
   font-size: 18px;
   line-height: 21.78px;
   padding-bottom: 5px;
-  /*
-  border: 2px solid var(--accent-color);
-  border-bottom: none;
-  */
 }
 
 .paragraf {
@@ -226,41 +181,33 @@
   flex-direction: column;
   padding: 0 25px;
   padding-top: 30px;
-  gap:27px;
+  gap: 27px;
   font-weight: var(--weight-paragraf, 400);
   font-size: 18px;
   line-height: 21px;
-  /*
-  border: 2px solid var(--accent-color);
-  border-top: none;
-  border-bottom: none;
-  */
 }
 
 .image__container {
   display: flex;
-  
   width: 100%;
- height: 100%;
+  height: 100%;
   position: relative;
-  
 }
 
 .image__load {
   display: block;
- background-position: center;
+  background-position: center;
   object-position: center;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  
 }
 
 .image__label {
   position: absolute;
   top: 30px;
   right: 25px;
-  font-family: PressStart2P, sans-serif;;
+  font-family: PressStart2P, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -274,27 +221,27 @@
 }
 
 .image-free-track {
-  filter:contrast(50%);
+  filter: contrast(50%);
 }
 
 .image-clean-sheet {
-  filter:blur(1rem);
+  filter: blur(1rem);
 }
 
 .image-and-if {
-  filter:opacity(0.2);
+  filter: opacity(0.2);
 }
 
 .image-persuit {
-  filter:grayscale(100%);
-
+  filter: grayscale(100%);
 }
+
 .image-about-those {
-  filter:saturate(300%);
+  filter: saturate(300%);
 }
 
 .image-by-pass {
-  filter:hue-rotate(100deg);
+  filter: hue-rotate(100deg);
 }
 
 .image-hands-go-down {
@@ -302,9 +249,8 @@
 }
 
 .image-i-am-here {
-  filter: brightness(400%) contract(200%);
+  filter: brightness(400%) contrast(200%);
 }
-
 
 @supports (
   (text-stroke: 1px var(--t-stroke)) or
@@ -323,24 +269,15 @@
   margin-bottom: 24px;
   margin-right: 24px;
   background-color: transparent;
-  
-  /*
-  border: 2px solid var(--accent-color);
-  border-top: none;
-  */
-  gap:10px;
+  gap: 10px;
   align-self: flex-end;
-  
 }
 
 .card__icon-button {
-  /*
-  display: flex;
-  */
   width: 39px;
   height: 38px;
   margin-left: -5px;
-  border-color:transparent;
+  border-color: transparent;
   cursor: pointer;
   position: relative;
 }
@@ -356,9 +293,7 @@
 }
 
 .card__like-button {
-  
   display: flex;
-  
   width: 129px;
   height: 38px;
   border: 2px solid var(--accent-color);
@@ -383,13 +318,7 @@
   display: block;
   width: 0px;
   height: 100%;
-  /*
-  transform: translate(100%);
-  */
   left: 0px;
-/*
-  transform: scaleX(0);
-  */
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
   position: absolute;
@@ -397,27 +326,18 @@
 
 .card__like-button:hover::before {
   width: 100%;
-/*
-  transform: scaleX(1);
-  */
   transform: translate(0);
-  
 }
 
 .like-icon {
   display: flex;
-  
   width: 39px;
   height: 38px;
   position: absolute;
-  
-  
   left: 0;
   top: 0;
-  
-  
-
 }
+
 .sparks {
   opacity: 0;
 }
@@ -435,9 +355,6 @@
   transition: fill 0.3s linear;
 }
 
-
-
-
 .main-body {
   fill: transparent;
   transition: fill 0.3s linear;
@@ -449,11 +366,7 @@
   transition-duration: 0.3s;
   transition-timing-function: linear;
   transition-property: fill;
-  
 }
-
-
-
 
 .like-icon:active .core {
   fill: var(--heart-color);
@@ -465,7 +378,6 @@
   transition-delay: 0.05s;
   transition: fill 0.3s linear;
 }
-
 
 .like-icon.is-liked .core {
   fill: var(--heart-color);
@@ -484,25 +396,20 @@
   transition: fill 0.3s linear;
 }
 
-
-
 .heart {
-  z-index:2;
+  z-index: 2;
 }
 
 .like-icon.is-liked .heart {
   animation: heart-scaling 0.3s ease-in normal;
   animation-iteration-count: 1;
-  animation-direction:alternate;
+  animation-direction: alternate;
   animation-delay: 0.1s;
-  
-  
 }
 .like-icon.is-liked .sparks {
   animation: heart-sparks 0.3s 0.3s ease-in;
-  animation-direction:alternate;
+  animation-direction: alternate;
   animation-iteration-count: 1;
-  
 }
 
 .button__text {
@@ -517,6 +424,9 @@
 }
 
 .footer {
+  /*
+  width: var(--lenght-field);
+  */
   display: flex;
   height: min-content;
   margin: auto;
@@ -535,16 +445,13 @@
   position: relative;
 }
 
-
-
-
 .footer__button {
   display: flex;
-  width: 335px;
+  width: clamp(320px, 100%, 335px);
   height: 51px;
   justify-content: center;
   align-items: center;
-  gap:8px;
+  gap: 8px;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   position: relative;
@@ -566,24 +473,15 @@
   width: 0px;
   position: absolute;
   height: 51px;
-  /*
-  transform: translate(100%);
-  */
   left: 0px;
-  /*
-  transform: scaleX(0);
-  */
+  top: 0px;
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
-
 }
 
 .footer__button:hover::before {
   width: 100%;
-  /*
-  transform: scaleX(1);
-  */
-  transform:  translate(0);
+  transform: translate(0);
 }
 
 .dialog__mod {
@@ -593,16 +491,16 @@
   position: fixed;
   inset: 0;
   flex-direction: column;
-  gap:30px;
-  border: 2px solid var(--accent-color) ;
+  gap: 30px;
+  border: 2px solid var(--accent-color);
 }
 .dialog__name {
-  display:flex;
+  display: flex;
   width: 100%;
   padding-top: 31.5px;
-  gap:22px;
-
+  gap: 22px;
 }
+
 .dialog__floppy {
   display: flex;
   width: 40px;
@@ -617,22 +515,14 @@
   display: flex;
   padding-bottom: 30.5px;
   width: 293px;
-  
   height: 38px;
-  
-  
- 
   justify-content: center;
-  align-items:center;
-  
+  align-items: center;
   border: 2px solid var(--accent-color);
   cursor: pointer;
-
-
 }
 
 .dialog__text {
-  
   width: 234px;
   font-family: PressStart2P, sans-serif;
   font-weight: 400;
@@ -642,16 +532,12 @@
 }
 
 .dialog__button-text {
-  
   font-family: PressStart2P, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 12.6px;
   text-transform: uppercase;
 }
-
-
-
 
 .dialog__mod:not([open]) {
   pointer-events: none;
@@ -661,9 +547,7 @@
 .dialog__mod::backdrop {
   content: "";
   background-color: rgb(0 0 0 / 0.6);
-  
   backdrop-filter: blur(7px);
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -672,9 +556,18 @@
   inset: 0;
 }
 
+@media screen and (width <= 375px) {
+  .field {
+    width: clamp(320px, 100%, 375px);
+  }
 
-
-
-@media screen and (width <=375px) {
-  --lenght-field: 100%;
+  .header__logo {
+    padding-left: 0;
+    font-size: clamp(2.9375rem, 2.2102rem + 3.6364vw, 3.0625rem);
+    line-height: clamp(2.9375rem, 2.2102rem + 3.6364vw, 3.0625rem);
+  }
+  .title {
+    font-size: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
+    line-height: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
+  }
 }
