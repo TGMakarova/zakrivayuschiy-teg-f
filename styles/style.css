@@ -13,7 +13,9 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
+* {
+  outline: 1px solid yellow;
+}
  
 
 .page {
@@ -23,7 +25,9 @@
 
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "weight-paragraf" var(--weight-paragraf);
+  
+  font-variation-settings: 'wgth' var(--weight-paragraf);
+  
   flex-direction: column;
   color: var(--accent-color);
   align-items: center;
@@ -256,7 +260,7 @@
   position: absolute;
   top: 30px;
   right: 25px;
-  font-family: PressStart2P;
+  font-family: PressStart2P, sans-serif;;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -571,7 +575,7 @@
   */
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
-  position: absolute;
+
 }
 
 .footer__button:hover::before {
@@ -584,8 +588,6 @@
 
 .dialog__mod {
   display: flex;
-  position: relative;
- 
   max-inline-size: 80%;
   min-inline-size: 250px;
   position: fixed;
@@ -648,6 +650,9 @@
   text-transform: uppercase;
 }
 
+
+
+
 .dialog__mod:not([open]) {
   pointer-events: none;
   opacity: 0;
@@ -666,6 +671,9 @@
   height: 100%;
   inset: 0;
 }
+
+
+
 
 @media screen and (width <=375px) {
   --lenght-field: 100%;
