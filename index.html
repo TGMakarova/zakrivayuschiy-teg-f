@@ -431,7 +431,7 @@
     </main>
     <footer class="footer field">
       <button class="footer__button" type="button"
-        onclick="window['dialog-id'].show()"
+        onclick="window['dialog-id'].showModal();"
         aria-controls="dialog-id">
       
         <svg viewBox="0 0 40 40" class="floppy">
@@ -443,20 +443,24 @@
           </span>
         </button>
       </footer>
-      <dialog class="dialog__mod" id="dialog-id">
+      <dialog id="dialog-id" class="dialog__mod">
         <div class="dialog__name">
+
           <div class="dialog__container">
-          <svg viewBox="0 0 40 40" class="floppy" >
+          <svg viewBox="0 0 40 40"  class="floppy-popover">
             <use href="svg/floppy.svg#floppy-1"/>
             </svg>
           </div>
-            <span class="dialog__text">
-              Вставьте дискету, чтобы продолжить
-            </span>
+         
+            <p class="dialog__text">
+              Вставьте  дискету, чтобы продолжить
+            </p>
+          
           </div>
           <form method="dialog">
-            <button class="dialog__button">
+            <button class="dialog__button"><span></span>
               ок
+            </span>
             </button>
           </form>
         </dialog>

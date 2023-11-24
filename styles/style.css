@@ -436,14 +436,25 @@
 
 .floppy {
   display: flex;
-  
   width: 21px;
-  height: 21px;
+  height: 21px; 
   color: var(--text-color);
   z-index: 2;
   mix-blend-mode: difference;
   position: relative;
 }
+
+.floppy-popover {
+  display: flex;
+  width: 40px;
+  height: 40px; 
+  color: var(--text-color);
+  position: relative;
+  /*
+  margin-left: -20px;
+  */
+}
+
 
 .footer__button {
   display: flex;
@@ -452,7 +463,8 @@
   padding-bottom: 15px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap:15px;
+  
   border: 2px solid var(--accent-color);
   cursor: pointer;
   position: relative;
@@ -486,15 +498,17 @@
 }
 
 .dialog__mod {
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns:  1fr;
-  grid-template-rows:  2fr;
-  max-inline-size: 80%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  background-color: var(--bg-color);
+  max-inline-size: 357px;
   min-inline-size: 250px;
   position: fixed;
   inset: 0;
   flex-direction: column;
-  gap: 30px;
+  row-gap: 30px;
   border: 2px solid var(--accent-color);
   grid-template-areas: 
   'dialog-name'
@@ -503,13 +517,24 @@
 .dialog__name {
   display: flex;
   width: 100%;
-  padding-top: 31.5px;
-  gap: 22px;
+  margin-top: 12.5px;
+  
+  margin-left: 10px;
+  padding-right: 20px;
+  gap: 20px;
+  
+  font-family: PressStart2P, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
   grid-area: dialog-name;
+  border: 1px solid red;
 }
-
+/*
 .dialog__floppy {
   display: flex;
+
   width: 21px;
   height: 21px;
   color: var(--accent-color);
@@ -517,12 +542,14 @@
   mix-blend-mode: difference;
   position: relative;
 }
-
+*/
 .dialog__button {
   display: flex;
-  padding-bottom: 30.5px;
+  
+  margin:auto;
+margin-bottom: 15.5px;
   width: 293px;
-  padding-top: 10px;
+  height: 38px;
   
   justify-content: center;
   align-items: center;
@@ -533,22 +560,28 @@
   font-family: PressStart2P, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 12.6px;
   text-transform: uppercase;
+  
 }
 
 .dialog__container {
+  padding-left: 0px;
+
 display:flex;
-width: 21px;
-height: 21px;
+align-self: center;
+width: 40px;
+height: 40px;
 color:var(--accent-color);
 
 
 }
 
 .dialog__text {
+  width: 100%;
+  margin-top:2px;
+  padding-right: 10px;
   display: flex;
-  width: 234px;
   font-family: PressStart2P, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -557,30 +590,25 @@ color:var(--accent-color);
   color:var(--accent-color);
   
 }
-/*
-.dialog__button-text {
-  font-family: PressStart2P, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 12.6px;
-  text-transform: uppercase;
-}
-*/
+
 .dialog__mod:not([open]) {
   pointer-events: none;
   opacity: 0;
 }
 
+
 .dialog__mod::backdrop {
   content: "";
   background-color: rgb(0 0 0 / 0.6);
   backdrop-filter: blur(7px);
+  /*
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   inset: 0;
+  */
 }
 
 @media screen and (width <= 375px) {
@@ -597,4 +625,7 @@ color:var(--accent-color);
     font-size: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
     line-height: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
   }
+}
+* {
+  outline:1px solid yellow;
 }
