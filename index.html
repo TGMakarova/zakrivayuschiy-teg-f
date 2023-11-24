@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header field">
-      <h1 class="header__logo">&lt;/HTML&gt;</h1>
-      <h2 class="title"> закрывающий тег</h2>
+      <div class="header__logo">&lt;/HTML&gt;</div>
+      <h1 class="title"> закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -433,10 +433,11 @@
       <button class="footer__button" type="button"
         onclick="window['dialog-id'].show()"
         aria-controls="dialog-id">
-
-        <svg viewBox="0 0 40 40" class="floppy">
-          <use href="svg/floppy.svg#floppy-1">
+      <div class="footer__container">
+        <svg viewBox="0 0 40 40">
+          <use href="svg/floppy.svg#floppy-1" class="floppy"> 
           </svg>
+        </div>
           <span class="button__text">
             Сохранить на память
           </span>
@@ -444,16 +445,18 @@
       </footer>
       <dialog class="dialog__mod" id="dialog-id">
         <div class="dialog__name">
-          <svg viewBox="0 0 40 40" class="dialog__floppy">
-            <use href="svg/floppy.svg#floppy-1">
+          <div class="dialog__container">
+          <svg viewBox="0 0 40 40" >
+            <use href="svg/floppy.svg#floppy-1" class="floppy">
             </svg>
+          </div>
             <span class="dialog__text">
               Вставьте дискету, чтобы продолжить
             </span>
           </div>
           <form method="dialog">
             <button class="dialog__button">
-              <span class="dialog__button-text"><br><br>ок</span>
+              ок
             </button>
           </form>
         </dialog>
