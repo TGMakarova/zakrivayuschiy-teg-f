@@ -40,7 +40,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  font-family: PressStart2P, sans-serif;
+  font-family: PressStart2P, fantasy, sans-serif;
   align-items: center;
   background-color: var(--bg-color, #ffffff);
   border: 2px solid var(--accent-color);
@@ -209,7 +209,7 @@
   position: absolute;
   top: 30px;
   right: 25px;
-  font-family: PressStart2P, sans-serif;
+  font-family: PressStart2P, fantasy, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -400,6 +400,7 @@
 
 .heart {
   z-index: 2;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .heart {
@@ -408,6 +409,7 @@
   animation-direction: alternate;
   animation-delay: 0.1s;
 }
+
 .like-icon.is-liked .sparks {
   animation: heart-sparks 0.3s 0.3s ease-in;
   animation-direction: alternate;
@@ -437,7 +439,7 @@
 .floppy {
   display: flex;
   width: 21px;
-  height: 21px; 
+  height: 21px;
   color: var(--text-color);
   z-index: 2;
   mix-blend-mode: difference;
@@ -447,14 +449,10 @@
 .floppy-popover {
   display: flex;
   width: 40px;
-  height: 40px; 
+  height: 40px;
   color: var(--text-color);
   position: relative;
-  /*
-  margin-left: -20px;
-  */
 }
-
 
 .footer__button {
   display: flex;
@@ -463,8 +461,7 @@
   padding-bottom: 15px;
   justify-content: center;
   align-items: center;
-  gap:15px;
-  
+  gap: 15px;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   position: relative;
@@ -487,7 +484,6 @@
   position: absolute;
   height: 51px;
   left: 0px;
-  
   background-color: var(--accent-color);
   transition: 0.5s ease-in-out;
 }
@@ -510,85 +506,64 @@
   flex-direction: column;
   row-gap: 30px;
   border: 2px solid var(--accent-color);
-  grid-template-areas: 
-  'dialog-name'
-  'butt';
+  grid-template-areas:
+    "dialog-name"
+    "butt";
 }
 .dialog__name {
   display: flex;
   width: 100%;
   margin-top: 12.5px;
-  
   margin-left: 10px;
   padding-right: 20px;
   gap: 20px;
-  
-  font-family: PressStart2P, sans-serif;
+  font-family: PressStart2P, fantasy, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   grid-area: dialog-name;
-  border: 1px solid red;
 }
-/*
-.dialog__floppy {
-  display: flex;
 
-  width: 21px;
-  height: 21px;
-  color: var(--accent-color);
-  z-index: 2;
-  mix-blend-mode: difference;
-  position: relative;
-}
-*/
 .dialog__button {
   display: flex;
-  
-  margin:auto;
-margin-bottom: 15.5px;
+  margin: auto;
+  margin-bottom: 15.5px;
   width: 293px;
   height: 38px;
-  
   justify-content: center;
   align-items: center;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   grid-area: butt;
-  color:var(--accent-color);
-  font-family: PressStart2P, sans-serif;
+  color: var(--accent-color);
+  font-family: PressStart2P, fantasy, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 12.6px;
   text-transform: uppercase;
-  
 }
 
 .dialog__container {
   padding-left: 0px;
-
-display:flex;
-align-self: center;
-width: 40px;
-height: 40px;
-color:var(--accent-color);
-
-
+  display: flex;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  color: var(--accent-color);
 }
 
 .dialog__text {
   width: 100%;
-  margin-top:2px;
+  margin-top: 2px;
   padding-right: 10px;
   display: flex;
-  font-family: PressStart2P, sans-serif;
+  font-family: PressStart2P, fantasy, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color:var(--accent-color);
-  
+  color: var(--accent-color);
 }
 
 .dialog__mod:not([open]) {
@@ -596,19 +571,10 @@ color:var(--accent-color);
   opacity: 0;
 }
 
-
 .dialog__mod::backdrop {
   content: "";
   background-color: rgb(0 0 0 / 0.6);
   backdrop-filter: blur(7px);
-  /*
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  */
 }
 
 @media screen and (width <= 375px) {
@@ -625,7 +591,4 @@ color:var(--accent-color);
     font-size: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
     line-height: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
   }
-}
-* {
-  outline:1px solid yellow;
 }
