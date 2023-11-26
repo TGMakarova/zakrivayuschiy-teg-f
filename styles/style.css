@@ -49,7 +49,7 @@
 
 .header__logo {
   color: var(--accent-color);
-  padding-top: 137px;
+  padding-top: clamp(7.5rem, 6.2588rem + 5.296vw, 8.5625rem);
   padding-left: 5px;
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   line-height: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
@@ -140,10 +140,10 @@
 .title {
   display: flex;
   padding-top: 20px;
-  font-size: 23px;
   font-weight: 400;
-  line-height: 23px;
   text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
+  line-height: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
 }
 
 .field {
@@ -168,6 +168,7 @@
 .subtitle {
   font-family: inherit;
   padding-left: 10px;
+  padding-right: 24px;
   padding-top: 2px;
   font-weight: var(--weight-title, 700);
   font-size: 18px;
@@ -271,7 +272,7 @@
   margin-bottom: 24px;
   margin-right: 24px;
   background-color: transparent;
-  gap: 10px;
+  gap: 11px;
   align-self: flex-end;
 }
 
@@ -335,9 +336,8 @@
   display: flex;
   width: 39px;
   height: 38px;
-  position: absolute;
-  left: 0;
-  top: 0;
+  padding-top: 0px;
+  padding-left: 0px;
 }
 
 .sparks {
@@ -456,12 +456,12 @@
 
 .footer__button {
   display: flex;
-  width: clamp(320px, 100%, 336px);
+  width: 336px;
   padding-top: 15px;
   padding-bottom: 15px;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
   border: 2px solid var(--accent-color);
   cursor: pointer;
   position: relative;
@@ -504,7 +504,7 @@
   position: fixed;
   inset: 0;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 30.5px;
   border: 2px solid var(--accent-color);
   grid-template-areas:
     "dialog-name"
@@ -513,10 +513,10 @@
 .dialog__name {
   display: flex;
   width: 100%;
-  margin-top: 12.5px;
-  margin-left: 10px;
-  padding-right: 20px;
-  gap: 20px;
+  margin-top: 12px;
+  margin-left: 11px;
+  padding-right: 19px;
+  gap: 19px;
   font-family: PressStart2P, fantasy, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -528,7 +528,7 @@
 .dialog__button {
   display: flex;
   margin: auto;
-  margin-bottom: 15.5px;
+  margin-bottom: 14.5px;
   width: 293px;
   height: 38px;
   justify-content: center;
@@ -577,18 +577,42 @@
   backdrop-filter: blur(7px);
 }
 
-@media screen and (width <= 375px) {
+@media screen and (width <= 380px) {
   .field {
-    width: clamp(320px, 100%, 375px);
+    width: 100%;
   }
 
   .header__logo {
-    padding-left: 0;
-    font-size: clamp(2.9375rem, 2.2102rem + 3.6364vw, 3.0625rem);
-    line-height: clamp(2.9375rem, 2.2102rem + 3.6364vw, 3.0625rem);
+    padding-top: 120px;
+    font-size: clamp(2.875rem, 1.7841rem + 5.4545vw, 3.0625rem);
+    line-height: clamp(2.875rem, 1.7841rem + 5.4545vw, 3.0625rem);
   }
-  .title {
-    font-size: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
-    line-height: clamp(1.3125rem, 0.5852rem + 3.6364vw, 1.4375rem);
+
+  .main__main {
+    gap: 50px;
+  }
+
+  .floppy {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer__button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 306px;
+  }
+
+  .footer__button::before {
+    height: 88px;
+  }
+
+  .dialog__text {
+    padding-right: 24px;
+  }
+
+  .dialog__mod {
+    row-gap: 26px;
   }
 }
